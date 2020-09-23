@@ -1,0 +1,7 @@
+Een programmeertaal is op het laagste niveau bekeken
+een verzameling van afgesproken datacontainers en operands 
+die op een logische manier met elkaar interacteren.
+Hierop kunnen vele uitbreidingen op komen om de taal 
+gebruiksvriendelijker te maken.
+Het doel is om met deze elementen uitvoerbare scripts voor
+de computer te schrijven.
