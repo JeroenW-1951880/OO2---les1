@@ -1,0 +1,4 @@
+een programmeerparadigma is de manier hoe men het 
+programmeren benadert. Je kunt de loop van het programma
+en de functies van een programma centraliseren (imperatief) 
+of je kunt de data van het programma centraliseren (OO).
