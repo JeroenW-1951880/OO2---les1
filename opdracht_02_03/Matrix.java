@@ -59,7 +59,7 @@ public class Matrix {
     /** The main() method of this program
      * hardcoded examples included to showcase the Matrix class
      */
-    public static void main() {
+    public static void main(String[] args) {
         Matrix m1 = new Matrix(), m2 = new Matrix();
         int[][] elems1 = {{1, 2, 3},{4 , 5, 5}, {7, 8, 9}};
         int[][] elems2 = {{8, 3, 6},{7 , 5, 1}, {4, 9, 2}};
