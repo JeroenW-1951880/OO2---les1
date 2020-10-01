@@ -10,6 +10,9 @@ public class Person {
     private String m_name;
     private String m_sirname;
     private Gender m_gender;
+    private Person m_partner;
+    private Person m_mom;
+    private Person m_dad;
 
     public String get_name(){
         return m_name;
@@ -21,6 +24,30 @@ public class Person {
 
     public Gender get_gender(){
         return m_gender;
+    }
+
+    public Person get_partner(){
+        return m_partner;
+    }
+
+    public Person get_mom(){
+        return m_mom;
+    }
+
+    public Person get_dad(){
+        return m_dad;
+    }
+
+    public void set_partner(Person partner){
+        this.m_partner = partner;
+    }
+
+    public void set_mom(Person mom) {
+        this.m_mom = mom;
+    }
+
+    public void set_dad(Person dad) {
+        this.m_dad = dad;
     }
 
     public void set_name(String name){
@@ -66,6 +93,9 @@ public class Person {
         p1.set_gender(Gender.MALE);
         System.out.println("p1 equals to p2?");
         System.out.println(Person.equals(p1, p2));
+        Person mom = new Person("mom", "Weltens", Gender.FEMALE);
+        p1.set_mom(mom);
+        System.out.println("p1's mother is: " + p1.get_mom().get_name());
     }
 }
 
