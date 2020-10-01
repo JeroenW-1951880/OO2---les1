@@ -37,8 +37,9 @@ public class Person {
     public Person get_dad(){
         return m_dad;
     }
-
-    public void set_partner(Person partner){
+    
+    /** this setter happens through marry()*/
+    private void set_partner(Person partner) {
         this.m_partner = partner;
     }
 
@@ -65,6 +66,16 @@ public class Person {
     /** method to check if 2 people are the same people*/
     static public boolean equals(Person p1, Person p2){
         return p1.m_name == p2.m_name && p1.m_sirname == p2.m_sirname && p1.m_gender == p2.m_gender;
+    }
+
+    /** method to set 2 persons as each other partners*/
+    static public void marry(Person p1, Person p2){
+        if (p1.m_gender == p2.m_gender){
+            System.out.println("Don't like to get political...");
+            return;
+        }
+        p1.set_partner(p2);
+        p2.set_partner(p1);
     }
 
     /** constructor with arguments*/
@@ -96,6 +107,11 @@ public class Person {
         Person mom = new Person("mom", "Weltens", Gender.FEMALE);
         p1.set_mom(mom);
         System.out.println("p1's mother is: " + p1.get_mom().get_name());
+        Person dad = new Person("dad", "Weltens", Gender.MALE);
+        p1.set_dad(dad);
+        Person.marry(dad, mom);
+        System.out.println("dad's partner is: " + dad.get_partner().get_name());
+        System.out.println("mom's partner is: " + mom.get_partner().get_name());
     }
 }
 
