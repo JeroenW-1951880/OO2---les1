@@ -27,12 +27,17 @@ public class Person {
         this.m_name = name;
     }
 
-    public void setM_sirname(String sirname) {
+    public void set_sirname(String sirname) {
         this.m_sirname = sirname;
     }
 
-    public void setM_gender(Gender gender) {
+    public void set_gender(Gender gender) {
         this.m_gender = gender;
+    }
+
+    /** method to check if 2 people are the same people*/
+    static public boolean equals(Person p1, Person p2){
+        return p1.m_name == p2.m_name && p1.m_sirname == p2.m_sirname && p1.m_gender == p2.m_gender;
     }
 
     /** constructor with arguments*/
@@ -53,6 +58,14 @@ public class Person {
         p1.set_name("Dirk");
         System.out.println("setting name of p1...");
         System.out.println("p1: " + p1.get_name());
+        System.out.println("p1 equals p2?");
+        System.out.println(Person.equals(p1, p2));
+        System.out.println("setting p1 to Jeroen Weltens, Male...");
+        p1.set_name("Jeroen");
+        p1.set_sirname("Weltens");
+        p1.set_gender(Gender.MALE);
+        System.out.println("p1 equals to p2?");
+        System.out.println(Person.equals(p1, p2));
     }
 }
 
